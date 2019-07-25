@@ -1,0 +1,184 @@
+---
+label: Products
+hide_body: true
+is_partial: false
+fields:
+  - type: text
+    name: title
+    label: Title
+    description: The title of the products page.
+    config:
+      required: true
+  - type: file
+    name: image
+    label: Image
+    description: Products image
+    config:
+      required: true
+  - type: text
+    name: heading
+    label: Heading
+    description: The header text
+    config:
+      required: true
+  - type: textarea
+    name: description
+    label: Description
+    description: Products description
+    config:
+      required: true
+  - type: field_group
+    name: intro
+    label: Intro
+    description: The page intro
+    config:
+      required: true
+    fields:
+      - type: text
+        name: heading
+        label: Heading
+        description: Products heading
+        config:
+          required: true
+      - type: text
+        name: description
+        label: Description
+        description: Products description
+        config:
+          required: true
+      - type: field_group_list
+        name: blurbs
+        label: Blurbs
+        description: Page blurbs
+        config:
+          required: true
+        fields:
+          - type: include
+            name: include_blurb
+            label: Blurb
+            template: blurb
+  - type: field_group
+    name: main
+    label: Main
+    description: Main part of the home page
+    config:
+      required: true
+    fields:
+      - type: text
+        name: heading
+        label: Heading
+        description: Main heading
+        config:
+          required: true
+      - type: textarea
+        name: description
+        label: Description
+        description: Main description
+        config:
+          required: true
+      - type: field_group
+        name: image1
+        label: Image1
+        description: Main Images
+        config:
+          required: true
+        fields:
+          - type: file
+            name: image
+            label: Image
+            description: Main Image1
+            config:
+              required: true
+          - type: text
+            name: alt
+            label: Alt
+            description: Alt text
+            config:
+              required: true
+      - type: field_group
+        name: image2
+        label: Image2
+        description: Main Images
+        config:
+          required: true
+        fields:
+          - type: file
+            name: image
+            label: Image
+            description: Main Image2
+            config:
+              required: true
+          - type: text
+            name: alt
+            label: Alt
+            description: Alt text
+            config:
+              required: true
+      - type: field_group
+        name: image3
+        label: Image3
+        description: Main Images
+        config:
+          required: true
+        fields:
+          - type: file
+            name: image
+            label: Image
+            description: Main Image3
+            config:
+              required: true
+          - type: text
+            name: alt
+            label: Alt
+            description: Alt text
+            config:
+              required: true
+  - type: field_group_list
+    name: testimonials
+    label: Testimonials
+    description: Testimonials
+    config:
+      required: true
+    fields:
+      - type: include
+        name: include_testimonial
+        label: Testimonial
+        template: testimonial
+  - type: file
+    name: full_image
+    label: Full Image
+    description: The full image
+  - type: field_group
+    name: pricing
+    label: Pricing
+    description: Products pricing
+    config:
+      required: true
+    fields:
+      - type: text
+        name: heading
+        label: Heading
+        description: Products heading
+        config:
+          required: true
+      - type: text
+        name: description
+        label: Description
+        description: Products description
+        config:
+          required: true
+      - type: list
+        name: plans
+        label: Plans
+        description: Plans...
+        config:
+          required: true
+  - type: text
+    name: template
+    label: Template
+    hidden: true
+    default: product-page
+    config:
+      required: true
+pages:
+  - src/pages/products/index.md

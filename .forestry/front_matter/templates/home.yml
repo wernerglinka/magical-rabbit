@@ -1,0 +1,166 @@
+---
+label: Home
+hide_body: true
+is_partial: false
+fields:
+  - type: text
+    name: title
+    label: Title
+    description: The title of the page.
+    config:
+      required: true
+  - type: file
+    name: image
+    label: Image
+    description: The banner image of the page.
+    config:
+      required: true
+  - type: text
+    name: heading
+    label: Heading
+    description: The header text
+    config:
+      required: true
+  - type: text
+    name: subheading
+    label: Subheading
+    description: The sub header text
+    config:
+      required: true
+  - type: field_group
+    name: mainpitch
+    label: Mainpitch
+    description: The mainpitch text
+    config:
+      required: true
+    fields:
+      - type: text
+        name: title
+        label: Title
+        description: The main pitch title
+        config:
+          required: true
+      - type: textarea
+        name: description
+        label: Description
+        description: The main pitch
+        config:
+          required: true
+          wysiwyg: true
+          schema:
+            format: markdown
+  - type: field_group
+    name: intro
+    label: Intro
+    description: The page intro
+    config:
+      required: true
+    fields:
+      - type: text
+        name: heading
+        label: Heading
+        description: Intro heading
+        config:
+          required: true
+      - type: text
+        name: description
+        label: Description
+        description: Intro description
+        config:
+          required: true
+      - type: field_group_list
+        name: blurbs
+        label: Blurbs
+        description: Page blurbs
+        config:
+          required: true
+        fields:
+          - type: include
+            name: include_blurb
+            label: Blurb
+            template: blurb
+  - type: field_group
+    name: main
+    label: Main
+    description: Main part of the home page
+    config:
+      required: true
+    fields:
+      - type: text
+        name: heading
+        label: Heading
+        description: Main heading
+        config:
+          required: true
+      - type: textarea
+        name: description
+        label: Description
+        description: Main description
+        config:
+          required: true
+      - type: field_group
+        name: image1
+        label: Image1
+        description: Main Images
+        config:
+          required: true
+        fields:
+          - type: file
+            name: image
+            label: Image
+            description: Main Image1
+            config:
+              required: true
+          - type: text
+            name: alt
+            label: Alt
+            description: Alt text
+            config:
+              required: true
+      - type: field_group
+        name: image2
+        label: Image2
+        description: Main Images
+        config:
+          required: true
+        fields:
+          - type: file
+            name: image
+            label: Image
+            description: Main Image2
+            config:
+              required: true
+          - type: text
+            name: alt
+            label: Alt
+            description: Alt text
+            config:
+              required: true
+      - type: field_group
+        name: image3
+        label: Image3
+        description: Main Images
+        config:
+          required: true
+        fields:
+          - type: file
+            name: image
+            label: Image
+            description: Main Image3
+            config:
+              required: true
+          - type: text
+            name: alt
+            label: Alt
+            description: Alt text
+            config:
+              required: true
+  - type: text
+    name: template
+    label: Template
+    hidden: true
+    default: index-page
+    config:
+      required: true
+pages:
+  - src/pages/index.md

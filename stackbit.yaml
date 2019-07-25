@@ -1,0 +1,388 @@
+stackbitVersion: ~0.2.0
+ssgName: custom
+buildCommand: npm run build
+publishDir: public
+staticDir: static
+uploadDir: img
+dataDir: data
+pagesDir: src/pages
+pageLayoutKey: template
+models:
+  home:
+    type: page
+    label: Home
+    layout: index-page
+    file: index.md
+    hideContent: true
+    singleInstance: true
+    fields:
+      - type: string
+        name: title
+        label: Title
+        description: The title of the page.
+        required: true
+      - type: image
+        name: image
+        label: Image
+        description: The banner image of the page.
+        required: true
+      - type: string
+        name: heading
+        label: Heading
+        description: The header text
+        required: true
+      - type: string
+        name: subheading
+        label: Subheading
+        description: The sub header text
+        required: true
+      - type: object
+        name: mainpitch
+        label: Mainpitch
+        description: The mainpitch text
+        required: true
+        fields:
+          - type: string
+            name: title
+            label: Title
+            description: The main pitch title
+            required: true
+          - type: markdown
+            name: description
+            label: Description
+            description: The main pitch
+            required: true
+      - type: object
+        name: intro
+        label: Intro
+        description: The page intro
+        required: true
+        fields:
+          - type: string
+            name: heading
+            label: Heading
+            description: Intro heading
+            required: true
+          - type: string
+            name: description
+            label: Description
+            description: Intro description
+            required: true
+          - type: list
+            name: blurbs
+            label: Blurbs
+            description: Page blurbs
+            required: true
+            items:
+              type: blurb
+      - type: object
+        name: main
+        label: Main
+        description: Main part of the home page
+        required: true
+        fields:
+          - type: string
+            name: heading
+            label: Heading
+            description: Main heading
+            required: true
+          - type: text
+            name: description
+            label: Description
+            description: Main description
+            required: true
+          - type: object
+            name: image1
+            label: Image1
+            description: Main Images
+            required: true
+            fields:
+              - type: image
+                name: image
+                label: Image
+                description: Main Image1
+                required: true
+              - type: string
+                name: alt
+                label: Alt
+                description: Alt text
+                required: true
+          - type: object
+            name: image2
+            label: Image2
+            description: Main Images
+            required: true
+            fields:
+              - type: image
+                name: image
+                label: Image
+                description: Main Image2
+                required: true
+              - type: string
+                name: alt
+                label: Alt
+                description: Alt text
+                required: true
+          - type: object
+            name: image3
+            label: Image3
+            description: Main Images
+            required: true
+            fields:
+              - type: image
+                name: image
+                label: Image
+                description: Main Image3
+                required: true
+              - type: string
+                name: alt
+                label: Alt
+                description: Alt text
+                required: true
+  about:
+    type: page
+    label: About
+    layout: about-page
+    file: about/index.md
+    hideContent: false
+    singleInstance: true
+    fields:
+      - type: string
+        name: title
+        label: Title
+        description: The title of the about page.
+        required: true
+  products:
+    type: page
+    label: Products
+    layout: product-page
+    file: products/index.md
+    hideContent: true
+    singleInstance: true
+    fields:
+      - type: string
+        name: title
+        label: Title
+        description: The title of the products page.
+        required: true
+      - type: image
+        name: image
+        label: Image
+        description: Products image
+        required: true
+      - type: string
+        name: heading
+        label: Heading
+        description: The header text
+        required: true
+      - type: text
+        name: description
+        label: Description
+        description: Products description
+        required: true
+      - type: object
+        name: intro
+        label: Intro
+        description: The page intro
+        required: true
+        fields:
+          - type: string
+            name: heading
+            label: Heading
+            description: Products heading
+            required: true
+          - type: string
+            name: description
+            label: Description
+            description: Products description
+            required: true
+          - type: list
+            name: blurbs
+            label: Blurbs
+            description: Page blurbs
+            required: true
+            items:
+              type: blurb
+      - type: object
+        name: main
+        label: Main
+        description: Main part of the home page
+        required: true
+        fields:
+          - type: string
+            name: heading
+            label: Heading
+            description: Main heading
+            required: true
+          - type: text
+            name: description
+            label: Description
+            description: Main description
+            required: true
+          - type: object
+            name: image1
+            label: Image1
+            description: Main Images
+            required: true
+            fields:
+              - type: image
+                name: image
+                label: Image
+                description: Main Image1
+                required: true
+              - type: string
+                name: alt
+                label: Alt
+                description: Alt text
+                required: true
+          - type: object
+            name: image2
+            label: Image2
+            description: Main Images
+            required: true
+            fields:
+              - type: image
+                name: image
+                label: Image
+                description: Main Image2
+                required: true
+              - type: string
+                name: alt
+                label: Alt
+                description: Alt text
+                required: true
+          - type: object
+            name: image3
+            label: Image3
+            description: Main Images
+            required: true
+            fields:
+              - type: image
+                name: image
+                label: Image
+                description: Main Image3
+                required: true
+              - type: string
+                name: alt
+                label: Alt
+                description: Alt text
+                required: true
+      - type: list
+        name: testimonials
+        label: Testimonials
+        description: Testimonials
+        required: true
+        items:
+          type: testimonial
+      - type: image
+        name: full_image
+        label: Full Image
+        description: The full image
+      - type: object
+        name: pricing
+        label: Pricing
+        description: Products pricing
+        required: true
+        fields:
+          - type: string
+            name: heading
+            label: Heading
+            description: Products heading
+            required: true
+          - type: string
+            name: description
+            label: Description
+            description: Products description
+            required: true
+          - type: list
+            name: plans
+            label: Plans
+            description: Plans...
+            required: true
+            fields:
+              - type: string
+                name: plan
+                label: Plan
+                description: Plan
+                required: true
+              - type: string
+                name: price
+                label: Price
+                description: Price
+                required: true
+              - type: string
+                name: description
+                label: Description
+                description: Description
+                required: true
+              - type: list
+                name: items
+                label: Items
+                description: Items
+                required: true
+  blog:
+    type: page
+    label: Blog post
+    layout: blog-post
+    folder: blog
+    hideContent: false
+    singleInstance: false
+    fields:
+      - type: string
+        name: title
+        label: Title
+        description: The blog title
+        required: true
+      - type: string
+        name: date
+        label: Publish Date
+        description: The blog publish date
+        required: true
+      - type: string
+        name: description
+        label: Description
+        description: Description
+        required: true
+      - type: boolean
+        name: featuredpost
+        label: Featured Post
+        description: Featured Post
+        required: true
+      - type: image
+        name: featuredimage
+        label: Featured Image
+        description: Featured Image
+      - type: list
+        name: tags
+        label: Tags
+        description: Blog post tags
+        required: true
+  blurb:
+    type: object
+    label: Blurb
+    fields:
+      - type: image
+        name: image
+        label: Image
+        description: Blurb image
+        required: true
+      - type: text
+        name: text
+        label: Text
+        description: blurb text
+        required: true
+  testimonial:
+    type: object
+    label: Testimonial
+    fields:
+      - type: string
+        name: quote
+        label: Quote
+        description: The quote
+        required: true
+      - type: string
+        name: author
+        label: Author
+        description: The author of the quote
+        required: true
+injectLocations: null

@@ -1,0 +1,17 @@
+---
+label: Blurb
+hide_body: true
+is_partial: true
+fields:
+  - type: file
+    name: image
+    label: Image
+    description: Blurb image
+    config:
+      required: true
+  - type: textarea
+    name: text
+    label: Text
+    description: blurb text
+    config:
+      required: true

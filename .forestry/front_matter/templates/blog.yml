@@ -1,0 +1,51 @@
+---
+label: Blog post
+hide_body: false
+is_partial: false
+fields:
+  - type: text
+    name: title
+    label: Title
+    description: The blog title
+    config:
+      required: true
+  - type: text
+    name: date
+    label: Publish Date
+    description: The blog publish date
+    config:
+      required: true
+  - type: text
+    name: description
+    label: Description
+    description: Description
+    config:
+      required: true
+  - type: boolean
+    name: featuredpost
+    label: Featured Post
+    description: Featured Post
+    config:
+      required: true
+  - type: file
+    name: featuredimage
+    label: Featured Image
+    description: Featured Image
+  - type: list
+    name: tags
+    label: Tags
+    description: Blog post tags
+    config:
+      required: true
+  - type: text
+    name: template
+    label: Template
+    hidden: true
+    default: blog-post
+    config:
+      required: true
+pages:
+  - src/pages/blog/2016-12-17-making-sense-of-the-scaas-new-flavor-wheel.md
+  - src/pages/blog/2017-01-04-a-beginners-guide-to-brewing-with-chemex.md
+  - >-
+    src/pages/blog/2017-01-04-just-in-small-batch-of-jamaican-blue-mountain-in-store-next-week.md
