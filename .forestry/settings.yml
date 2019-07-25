@@ -2,32 +2,41 @@
 new_page_extension: md
 auto_deploy: false
 admin_path: static/admin
-webhook_url: 'https://api.stackbit.com/project/5d3a3bb36caf840011db473d/webhook/forestry'
+webhook_url: https://api.stackbit.com/project/5d3a3bb36caf840011db473d/webhook/forestry
 sections:
-  - type: document
-    label: Home
-    path: src/pages/index.md
-    templates:
-      - home
-  - type: document
-    label: About
-    path: src/pages/about/index.md
-    templates:
-      - about
-  - type: document
-    label: Products
-    path: src/pages/products/index.md
-    templates:
-      - products
-  - type: directory
-    path: src/pages/blog
-    match: '**/*'
-    label: Blog posts
-    create: all
-    templates:
-      - blog
+- type: document
+  path: src/pages/index.md
+  label: Home
+  templates:
+  - home
+- type: document
+  path: src/pages/about/index.md
+  label: About
+  templates:
+  - about
+- type: document
+  path: src/pages/products/index.md
+  label: Products
+  templates:
+  - products
+- type: directory
+  path: src/pages/blog
+  label: Blog posts
+  create: all
+  match: "**/*"
+  templates:
+  - blog
 upload_dir: static/img
-public_path: /img
+public_path: "/img"
 front_matter_path: ''
 use_front_matter_path: false
-file_template: ':filename:'
+file_template: ":filename:"
+build:
+  preview_command: gatsby build
+  publish_command: gatsby build
+  preview_output_directory: public
+  output_directory: public
+  instant_preview_command: npm run forestry:preview
+  install_dependencies_command: yarn install
+  preview_docker_image: node:10
+  mount_path: "/srv"

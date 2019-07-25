@@ -1,20 +1,19 @@
 ---
 label: About
 hide_body: false
-is_partial: false
 fields:
-  - type: text
-    name: title
-    label: Title
-    description: The title of the about page.
-    config:
-      required: true
-  - type: text
-    name: template
-    label: Template
-    hidden: true
-    default: about-page
-    config:
-      required: true
+- type: text
+  name: title
+  label: Title
+  description: The title of the about page.
+  config:
+    required: true
+- type: text
+  name: template
+  label: Template
+  hidden: true
+  default: about-page
+  config:
+    required: true
 pages:
-  - src/pages/about/index.md
+- src/pages/about/index.md

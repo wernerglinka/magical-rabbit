@@ -1,17 +1,16 @@
 ---
 label: Testimonial
 hide_body: true
-is_partial: true
 fields:
-  - type: text
-    name: quote
-    label: Quote
-    description: The quote
-    config:
-      required: true
-  - type: text
-    name: author
-    label: Author
-    description: The author of the quote
-    config:
-      required: true
+- type: text
+  name: quote
+  label: Quote
+  description: The quote
+  config:
+    required: true
+- type: text
+  name: author
+  label: Author
+  description: The author of the quote
+  config:
+    required: true
