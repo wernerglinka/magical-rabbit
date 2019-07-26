@@ -1,7 +1,7 @@
 ---
-title: Great coffee with a conscience AHA
+title: Great coffee with a conscience
 image: "/img/jumbotron.jpg"
-heading: Great coffee with a conscience
+heading: Great coffee with a conscience - AHA
 subheading: Support sustainable farming while enjoying a cup - REALLY
 mainpitch:
   title: Why Kaldi
