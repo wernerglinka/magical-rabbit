@@ -5,10 +5,12 @@ heading: Great coffee with a conscience - AHA
 subheading: Support sustainable farming while enjoying a cup - REALLY
 mainpitch:
   title: Why Kaldi
-  description: Kaldi is the coffee store for everyone who believes that great coffee
-    shouldn't just taste good, it **should do good too. W**e source all of our beans
-    directly from small scale sustainable farmers and make sure part of the profits
-    are reinvested in their communities.
+  description: |-
+    Kaldi is the coffee store for everyone who believes that great coffee shouldn't just taste good, it **should do good too. W**e source all of our beans directly from small scale sustainable farmers and make sure part of the profits are reinvested in their communities.
+
+    ![](https://res.cloudinary.com/glinkaco/image/upload/v1567094070/page_sections/whats-new/black-hat-2019_tuwlsm.jpg)
+
+    Nullam id dolor id nibh ultricies vehicula ut id elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. **Cras mattis consectetur** purus sit amet fermentum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas faucibus mollis interdum. Cras mattis consectetur purus sit amet fermentum.
 intro:
   heading: What we offer
   description: 'Kaldi is the ultimate spot for coffee lovers who want to learn about
